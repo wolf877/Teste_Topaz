@@ -15,8 +15,7 @@ if 1<= ttask <= 10 or 11<= umax <= 10:
     servidores = [];
     text = '';
     cost = 0;
-    
-    # print(servidores[-1])
+
     while True:
       
         if servidores == []:
@@ -90,6 +89,4 @@ if 1<= ttask <= 10 or 11<= umax <= 10:
     out.write(text)
     out.close()
     
-    # print(cost)
-    # print(text)
-    # print(servidores)
+
