@@ -1,6 +1,6 @@
 
-with open("input.txt", "rt") as fd:
-    lines = fd.read().splitlines()
+with open("input.txt", "rt") as inp:
+    lines = inp.read().splitlines()
 
 lista = [int(x) for x in lines ]
 
@@ -10,7 +10,7 @@ users = lista[2:];
 
 
 
-if 1<= ttask <= 10 or 11<= umax <= 10:
+if 1<= ttask <= 10 or 1<= umax <= 10:
     tick = 0;
     servidores = [];
     text = '';
@@ -25,7 +25,7 @@ if 1<= ttask <= 10 or 11<= umax <= 10:
                 else:
                     control = True
                     for k in servidores:
-                        if len(k) == 1:
+                        if len(k) < umax:
                             k.append(ttask)
                             control = False
                             break
@@ -40,7 +40,7 @@ if 1<= ttask <= 10 or 11<= umax <= 10:
                 for i in range(0, users[tick]):
                     control = True
                     for k in servidores:
-                        if len(k) == 1:
+                        if len(k) < umax:
                             k.append(ttask)
                             control = False
                             break
